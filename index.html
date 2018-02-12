@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>21</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <!-- Latest compiled and minified CSS -->
+
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous"> -->
+  <!-- Optional theme -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Svarti Pétur!
+        </h1>
+      </div>
+      <div class="col-md-6">
+        <h3>Leikmaður</h3>
+        <h2 id="player">
+        </h2>
+        <button type="button" name="button" id="playerDrawCard" class="btn btn-danger">Gefa spil</button>
+        <button type="button" name="button" id="playerStays" class="btn btn-success">Standa</button>
+        <button type="button" name="button" id="playerReset" class="btn btn-primary">Endursetja</button>
+
+      </div>
+      <div class="col-md-6">
+        <h3>Dealer</h3>
+        <h2 id="cpu"> </h2>
+      </div>
+    </div>
+  </div>
+  <div class="container container-space">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div id="border" class="panel-body border border-dark rounded">
+            <h3>Peninga Hornið</h3>
+            <p>
+              <strong>
+                Veðmál:
+                <p id="bet"></p>
+              </strong>
+            </p>
+            <button id="playerBetMore" type="button" name="button" class="btn btn-danger">Veðja meira
+              <span id="betAmount"></span>
+            </button>
+            <button id="playerBetLess" type="button" name="button" class="btn btn-success">Veðja minna</button>
+            <button id="playerClearBet" type="button" name="button" class="btn btn-primary">Eyða veðmáli</button>
+
+            <h3>
+
+            </h3>
+            <p>
+              <strong>
+                Peningar:
+                <p id="money">
+                  <strong></strong>
+                </p>
+              </strong>
+            </p>
+            <h2> Sigurvegari :</h2>
+            <h1 id="winner"></h1>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="refill">
+
+      <h1>Það lýtur út fyrir að þú ert orðinn blankur í
+        <span id="brokeCounter"> 1 </span> skipti ! Smelltu á takkan til að fá lánaðan pening með einunigs 850% daglegum vöxtum!
+        <span>
+          <button id="btnRefill" class="btn btn-warning">Hagstætt lán!</button>
+        </span>
+      </h1>
+
+    </div>
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="j.js" charset="utf-8"></script>
+</body>
+
+</html>
