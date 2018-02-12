@@ -142,32 +142,38 @@ welcomeScreen();
 
 // Player asks for another card. 
 $('#playerDrawCard').click(function () {
-  $("#playerReset").prop("disabled", true);
-  
-
-
-  if (bet <= money) {
-
-    // runs the drawCard function and adds the results from the function to the
-    // playerScore variable.
-    playerScore += drawCard();
-
-    // runs the updatePlayer function and passes the score as paramenter.
-    // updateplayer function changes the score visible to the player on
-    // the site.
-    updatePlayer(playerScore);
-    if (playerScore > 0) {
-
-      $("#playerStays").prop("disabled", false);
-
-    }
-    if (playerScore >= 21) {
-      $("#playerStays").prop("disabled", true);
-
-    }
+  if (bet == 0) {
+    alert("þú verður að leggja undir!!!")
   } else {
-    alert("Þú att ekki efni á þessu!")
+
+    $("#playerReset").prop("disabled", true);
+
+
+
+    if (bet <= money) {
+
+      // runs the drawCard function and adds the results from the function to the
+      // playerScore variable.
+      playerScore += drawCard();
+
+      // runs the updatePlayer function and passes the score as paramenter.
+      // updateplayer function changes the score visible to the player on
+      // the site.
+      updatePlayer(playerScore);
+      if (playerScore > 0) {
+
+        $("#playerStays").prop("disabled", false);
+
+      }
+      if (playerScore >= 21) {
+        $("#playerStays").prop("disabled", true);
+
+      }
+    } else {
+      alert("Þú att ekki efni á þessu!")
+    }
   }
+
 
 });
 
@@ -217,11 +223,10 @@ $("#playerClearBet").click(function () {
   }
 });
 $("#playerReset").click(function () {
-  if(bet>money)
-  {
-    bet=money;
+  if (bet > money) {
+    bet = money;
     updateBet(bet);
-    
+
   }
   updateMoney();
   playerReset();
@@ -236,7 +241,7 @@ $("#playerReset").click(function () {
 
 function playerWonBet() {
   $("#playerReset").prop("disabled", false);
-  
+
   money = money + bet;
 }
 
@@ -246,7 +251,7 @@ function playerWonBlackJack() {
 
 function playerLostBet() {
   $("#playerReset").prop("disabled", false);
- 
+
 
   money = money - bet;
   if (money <= 0) {
