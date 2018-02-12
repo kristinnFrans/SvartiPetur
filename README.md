@@ -1,0 +1,2 @@
+# SvartiPetur
+Skólaverkefni BlackJack
